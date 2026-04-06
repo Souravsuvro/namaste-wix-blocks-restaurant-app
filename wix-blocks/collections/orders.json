@@ -1,0 +1,126 @@
+{
+  "id": "orders",
+  "displayName": "Orders",
+  "permissions": {
+    "read": "Admin",
+    "write": "Anyone"
+  },
+  "fields": [
+    {
+      "key": "orderNumber",
+      "displayName": "Order Number",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "items",
+      "displayName": "Order Items",
+      "type": "RichContent",
+      "required": true
+    },
+    {
+      "key": "subtotal",
+      "displayName": "Subtotal",
+      "type": "Number",
+      "required": true,
+      "minimum": 0
+    },
+    {
+      "key": "serviceFee",
+      "displayName": "Service Fee",
+      "type": "Number",
+      "required": false,
+      "minimum": 0
+    },
+    {
+      "key": "deliveryFee",
+      "displayName": "Delivery Fee",
+      "type": "Number",
+      "required": false,
+      "minimum": 0
+    },
+    {
+      "key": "tax",
+      "displayName": "Tax",
+      "type": "Number",
+      "required": false,
+      "minimum": 0
+    },
+    {
+      "key": "total",
+      "displayName": "Total",
+      "type": "Number",
+      "required": true,
+      "minimum": 0
+    },
+    {
+      "key": "status",
+      "displayName": "Status",
+      "type": "Text",
+      "required": true,
+      "enum": ["new", "confirmed", "preparing", "ready", "out-for-delivery", "delivered", "picked-up", "cancelled"]
+    },
+    {
+      "key": "orderType",
+      "displayName": "Order Type",
+      "type": "Text",
+      "required": true,
+      "enum": ["delivery", "pickup", "dine-in"]
+    },
+    {
+      "key": "customerName",
+      "displayName": "Customer Name",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "customerPhone",
+      "displayName": "Customer Phone",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "customerEmail",
+      "displayName": "Customer Email",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "deliveryAddress",
+      "displayName": "Delivery Address",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "specialInstructions",
+      "displayName": "Special Instructions",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "paymentMethod",
+      "displayName": "Payment Method",
+      "type": "Text",
+      "required": false,
+      "enum": ["card", "cash", "online"]
+    },
+    {
+      "key": "estimatedTime",
+      "displayName": "Estimated Time",
+      "type": "Number",
+      "required": false
+    },
+    {
+      "key": "createdAt",
+      "displayName": "Created At",
+      "type": "DateTime",
+      "required": true
+    }
+  ],
+  "indexes": [
+    { "fields": ["status"] },
+    { "fields": ["orderType"] },
+    { "fields": ["createdAt"] },
+    { "fields": ["orderNumber"], "unique": true }
+  ]
+}

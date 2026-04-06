@@ -1,0 +1,85 @@
+{
+  "id": "reservations",
+  "displayName": "Reservations",
+  "permissions": {
+    "read": "Admin",
+    "write": "Anyone"
+  },
+  "fields": [
+    {
+      "key": "date",
+      "displayName": "Date",
+      "type": "Date",
+      "required": true
+    },
+    {
+      "key": "time",
+      "displayName": "Time",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "partySize",
+      "displayName": "Party Size",
+      "type": "Number",
+      "required": true,
+      "minimum": 1,
+      "maximum": 20
+    },
+    {
+      "key": "customerName",
+      "displayName": "Customer Name",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "customerEmail",
+      "displayName": "Customer Email",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "customerPhone",
+      "displayName": "Customer Phone",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "occasion",
+      "displayName": "Occasion",
+      "type": "Text",
+      "required": false,
+      "enum": ["none", "birthday", "anniversary", "business", "date-night", "celebration", "other"]
+    },
+    {
+      "key": "status",
+      "displayName": "Status",
+      "type": "Text",
+      "required": true,
+      "enum": ["pending", "confirmed", "seated", "completed", "cancelled", "no-show", "waitlisted"]
+    },
+    {
+      "key": "notes",
+      "displayName": "Special Requests",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "tableNumber",
+      "displayName": "Table Number",
+      "type": "Number",
+      "required": false
+    },
+    {
+      "key": "createdAt",
+      "displayName": "Created At",
+      "type": "DateTime",
+      "required": true
+    }
+  ],
+  "indexes": [
+    { "fields": ["date"] },
+    { "fields": ["status"] },
+    { "fields": ["date", "time"] }
+  ]
+}

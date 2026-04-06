@@ -1,0 +1,19 @@
+{
+  "id": "delivery-widget",
+  "name": "Delivery Zone & Tracking",
+  "description": "Delivery zone display, address validation, fee calculation, and live order tracking.",
+  "defaultSize": { "width": 700, "height": 500 },
+  "properties": [
+    { "key": "restaurantLat", "type": "number", "default": 47.6847 },
+    { "key": "restaurantLng", "type": "number", "default": 2.6286 },
+    { "key": "maxDeliveryRadiusKm", "type": "number", "default": 10 },
+    { "key": "baseFee", "type": "number", "default": 2.50 },
+    { "key": "feePerKm", "type": "number", "default": 0.80 },
+    { "key": "freeDeliveryThreshold", "type": "number", "default": 40 },
+    { "key": "estimatedTimePerKm", "type": "number", "default": 3 },
+    { "key": "basePreparationMinutes", "type": "number", "default": 25 },
+    { "key": "primaryColor", "type": "string", "default": "#1B3A6B" },
+    { "key": "accentColor", "type": "string", "default": "#E8731A" }
+  ],
+  "events": ["addressValidated", "deliveryFeeCalculated", "trackingUpdated"]
+}

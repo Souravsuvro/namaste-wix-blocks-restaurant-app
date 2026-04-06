@@ -1,0 +1,116 @@
+{
+  "id": "menu-items",
+  "displayName": "Menu Items",
+  "permissions": {
+    "read": "Anyone",
+    "write": "Admin"
+  },
+  "fields": [
+    {
+      "key": "name",
+      "displayName": "Item Name",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "key": "description",
+      "displayName": "Description",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "price",
+      "displayName": "Price",
+      "type": "Number",
+      "required": true,
+      "minimum": 0
+    },
+    {
+      "key": "category",
+      "displayName": "Category",
+      "type": "Text",
+      "required": true,
+      "enum": ["Entrées", "Plats Principaux", "Tandoori & Grillades", "Biryani & Riz", "Desserts", "Bar & Cocktails"]
+    },
+    {
+      "key": "image",
+      "displayName": "Image",
+      "type": "Image",
+      "required": false
+    },
+    {
+      "key": "spiceLevel",
+      "displayName": "Spice Level",
+      "type": "Number",
+      "required": false,
+      "minimum": 0,
+      "maximum": 5
+    },
+    {
+      "key": "allergens",
+      "displayName": "Allergens",
+      "type": "Tags",
+      "required": false,
+      "enum": ["nuts", "dairy", "gluten", "shellfish", "eggs", "soy", "celery", "mustard", "sesame"]
+    },
+    {
+      "key": "isVegetarian",
+      "displayName": "Vegetarian",
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+    {
+      "key": "isVegan",
+      "displayName": "Vegan",
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+    {
+      "key": "isGlutenFree",
+      "displayName": "Gluten Free",
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+    {
+      "key": "isHalal",
+      "displayName": "Halal",
+      "type": "Boolean",
+      "required": false,
+      "default": false
+    },
+    {
+      "key": "isAvailable",
+      "displayName": "Available",
+      "type": "Boolean",
+      "required": false,
+      "default": true
+    },
+    {
+      "key": "sortOrder",
+      "displayName": "Sort Order",
+      "type": "Number",
+      "required": false,
+      "default": 0
+    },
+    {
+      "key": "nameFr",
+      "displayName": "Name (French)",
+      "type": "Text",
+      "required": false
+    },
+    {
+      "key": "descriptionFr",
+      "displayName": "Description (French)",
+      "type": "Text",
+      "required": false
+    }
+  ],
+  "indexes": [
+    { "fields": ["category"] },
+    { "fields": ["isAvailable"] },
+    { "fields": ["sortOrder"] }
+  ]
+}

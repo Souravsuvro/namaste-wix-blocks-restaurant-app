@@ -1,0 +1,21 @@
+{
+  "id": "menu-widget",
+  "name": "Restaurant Menu",
+  "description": "Displays the restaurant menu with categories, dietary filters, spice levels, and responsive layouts.",
+  "defaultSize": { "width": 980, "height": 600 },
+  "properties": [
+    { "key": "layout", "type": "string", "default": "grid", "enum": ["grid", "list", "card", "editorial"] },
+    { "key": "columns", "type": "number", "default": 3, "minimum": 1, "maximum": 4 },
+    { "key": "itemsPerPage", "type": "number", "default": 12 },
+    { "key": "showSpiceLevel", "type": "boolean", "default": true },
+    { "key": "showAllergens", "type": "boolean", "default": true },
+    { "key": "showDietaryBadges", "type": "boolean", "default": true },
+    { "key": "showImages", "type": "boolean", "default": true },
+    { "key": "currency", "type": "string", "default": "EUR" },
+    { "key": "primaryColor", "type": "string", "default": "#1B3A6B" },
+    { "key": "accentColor", "type": "string", "default": "#E8731A" },
+    { "key": "fontFamily", "type": "string", "default": "DM Sans" }
+  ],
+  "events": ["itemClicked", "categoryChanged", "filterChanged"],
+  "settingsPanel": "settings-panel"
+}

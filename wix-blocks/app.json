@@ -1,0 +1,108 @@
+{
+  "appDefinitionId": "namaste-restaurant-app",
+  "name": "Namaste Restaurant Manager",
+  "version": "1.0.0",
+  "description": "Complete restaurant management app — menu display, online ordering, table reservations, and delivery tracking for Wix sites.",
+  "blocksVersion": "2.0",
+  "defaultLocale": "fr",
+  "supportedLocales": ["fr", "en"],
+  "category": "Restaurants & Food",
+  "tags": ["restaurant", "menu", "ordering", "reservations", "delivery", "food"],
+  "permissions": [
+    "WIX_DATA.READ",
+    "WIX_DATA.WRITE",
+    "WIX_CRM.READ",
+    "WIX_CRM.WRITE",
+    "WIX_NOTIFICATIONS.SEND",
+    "WIX_PAY.READ"
+  ],
+  "widgets": [
+    {
+      "id": "menu-widget",
+      "name": "Restaurant Menu",
+      "description": "Displays the restaurant menu with categories, dietary filters, and responsive layouts.",
+      "defaultSize": { "width": 980, "height": 600 }
+    },
+    {
+      "id": "order-widget",
+      "name": "Online Ordering",
+      "description": "Allows customers to place orders for delivery, pickup, or dine-in.",
+      "defaultSize": { "width": 980, "height": 700 }
+    },
+    {
+      "id": "reservation-widget",
+      "name": "Table Reservations",
+      "description": "Lets customers book tables with date, time, and party size selection.",
+      "defaultSize": { "width": 600, "height": 500 }
+    },
+    {
+      "id": "delivery-widget",
+      "name": "Delivery Zone & Tracking",
+      "description": "Shows delivery zones, calculates fees, and tracks order delivery status.",
+      "defaultSize": { "width": 700, "height": 500 }
+    }
+  ],
+  "panels": [
+    {
+      "id": "settings-panel",
+      "name": "Restaurant Settings",
+      "description": "Configure restaurant details, hours, delivery zones, and widget appearance."
+    }
+  ],
+  "dashboardPages": [
+    {
+      "id": "orders-dashboard",
+      "name": "Orders",
+      "description": "Manage incoming orders and update their status."
+    },
+    {
+      "id": "reservations-dashboard",
+      "name": "Reservations",
+      "description": "View and manage table reservations."
+    },
+    {
+      "id": "analytics-dashboard",
+      "name": "Analytics",
+      "description": "Revenue charts, popular items, and customer insights."
+    }
+  ],
+  "collections": [
+    "menu-items",
+    "orders",
+    "reservations"
+  ],
+  "pricing": {
+    "free": {
+      "name": "Starter",
+      "price": 0,
+      "features": ["Menu widget only", "Up to 20 menu items", "Basic styling"]
+    },
+    "standard": {
+      "name": "Standard",
+      "price": 9.99,
+      "currency": "USD",
+      "billingCycle": "MONTHLY",
+      "features": [
+        "All 4 widgets",
+        "Unlimited menu items",
+        "Orders dashboard",
+        "Reservations dashboard",
+        "Email notifications"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "price": 24.99,
+      "currency": "USD",
+      "billingCycle": "MONTHLY",
+      "features": [
+        "All Standard features",
+        "Analytics dashboard",
+        "Delivery zone management",
+        "SMS notifications",
+        "Priority support",
+        "Custom branding"
+      ]
+    }
+  }
+}

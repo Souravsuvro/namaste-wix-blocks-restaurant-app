@@ -1,0 +1,83 @@
+{
+  "id": "settings-panel",
+  "name": "Restaurant Settings",
+  "description": "Configure restaurant details, operating hours, delivery zones, and widget appearance.",
+  "width": 340,
+  "sections": [
+    {
+      "id": "general",
+      "title": "General Settings",
+      "fields": [
+        { "key": "restaurantName", "label": "Restaurant Name", "type": "text", "default": "Namaste GIEN" },
+        { "key": "currency", "label": "Currency", "type": "select", "options": ["EUR", "USD", "GBP"], "default": "EUR" },
+        { "key": "locale", "label": "Language", "type": "select", "options": ["fr", "en"], "default": "fr" }
+      ]
+    },
+    {
+      "id": "hours",
+      "title": "Operating Hours",
+      "fields": [
+        { "key": "closedDays", "label": "Closed Days", "type": "multiselect", "options": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "default": ["Monday"] },
+        { "key": "lunchStart", "label": "Lunch Start", "type": "time", "default": "12:00" },
+        { "key": "lunchEnd", "label": "Lunch End", "type": "time", "default": "14:30" },
+        { "key": "dinnerStart", "label": "Dinner Start", "type": "time", "default": "19:00" },
+        { "key": "dinnerEnd", "label": "Dinner End", "type": "time", "default": "22:30" }
+      ]
+    },
+    {
+      "id": "menu",
+      "title": "Menu Widget",
+      "fields": [
+        { "key": "menuLayout", "label": "Layout", "type": "select", "options": ["grid", "list", "card", "editorial"], "default": "grid" },
+        { "key": "menuColumns", "label": "Columns (Desktop)", "type": "number", "min": 1, "max": 4, "default": 3 },
+        { "key": "itemsPerPage", "label": "Items per Page", "type": "number", "min": 4, "max": 50, "default": 12 },
+        { "key": "showSpiceLevel", "label": "Show Spice Level", "type": "toggle", "default": true },
+        { "key": "showAllergens", "label": "Show Allergens", "type": "toggle", "default": true },
+        { "key": "showDietaryBadges", "label": "Show Dietary Badges", "type": "toggle", "default": true },
+        { "key": "showImages", "label": "Show Images", "type": "toggle", "default": true }
+      ]
+    },
+    {
+      "id": "ordering",
+      "title": "Ordering",
+      "fields": [
+        { "key": "enableDelivery", "label": "Enable Delivery", "type": "toggle", "default": true },
+        { "key": "enablePickup", "label": "Enable Pickup", "type": "toggle", "default": true },
+        { "key": "enableDineIn", "label": "Enable Dine-in", "type": "toggle", "default": true },
+        { "key": "minimumOrder", "label": "Minimum Order (€)", "type": "number", "min": 0, "default": 15 },
+        { "key": "serviceFeePercent", "label": "Service Fee (%)", "type": "number", "min": 0, "max": 30, "default": 5 },
+        { "key": "taxPercent", "label": "Tax (%)", "type": "number", "min": 0, "max": 30, "default": 10 }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery Zones",
+      "fields": [
+        { "key": "maxDeliveryRadius", "label": "Max Delivery Radius (km)", "type": "number", "min": 1, "max": 50, "default": 10 },
+        { "key": "baseFee", "label": "Base Delivery Fee (€)", "type": "number", "min": 0, "default": 2.50 },
+        { "key": "feePerKm", "label": "Fee per km (€)", "type": "number", "min": 0, "default": 0.80 },
+        { "key": "freeDeliveryThreshold", "label": "Free Delivery Above (€)", "type": "number", "min": 0, "default": 40 }
+      ]
+    },
+    {
+      "id": "reservations",
+      "title": "Reservations",
+      "fields": [
+        { "key": "maxPartySize", "label": "Max Party Size", "type": "number", "min": 1, "max": 50, "default": 20 },
+        { "key": "maxCapacity", "label": "Max Capacity per Slot", "type": "number", "min": 1, "default": 60 },
+        { "key": "slotDuration", "label": "Slot Duration (min)", "type": "number", "min": 30, "max": 180, "default": 90 },
+        { "key": "enableWaitlist", "label": "Enable Waitlist", "type": "toggle", "default": true }
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": "Appearance",
+      "fields": [
+        { "key": "primaryColor", "label": "Primary Color", "type": "color", "default": "#1B3A6B" },
+        { "key": "accentColor", "label": "Accent Color", "type": "color", "default": "#E8731A" },
+        { "key": "backgroundColor", "label": "Background Color", "type": "color", "default": "#FDF6EC" },
+        { "key": "fontFamily", "label": "Body Font", "type": "select", "options": ["DM Sans", "Roboto", "Open Sans", "Lato"], "default": "DM Sans" }
+      ]
+    }
+  ]
+}

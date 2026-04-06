@@ -1,0 +1,18 @@
+{
+  "id": "order-widget",
+  "name": "Online Ordering",
+  "description": "Full online ordering system with cart, checkout, order types (delivery/pickup/dine-in), and order tracking.",
+  "defaultSize": { "width": 980, "height": 700 },
+  "properties": [
+    { "key": "enableDelivery", "type": "boolean", "default": true },
+    { "key": "enablePickup", "type": "boolean", "default": true },
+    { "key": "enableDineIn", "type": "boolean", "default": true },
+    { "key": "minimumOrder", "type": "number", "default": 15 },
+    { "key": "serviceFeePercent", "type": "number", "default": 5 },
+    { "key": "taxPercent", "type": "number", "default": 10 },
+    { "key": "currency", "type": "string", "default": "EUR" },
+    { "key": "primaryColor", "type": "string", "default": "#1B3A6B" },
+    { "key": "accentColor", "type": "string", "default": "#E8731A" }
+  ],
+  "events": ["orderPlaced", "cartUpdated", "checkoutStarted"]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "reservation-widget",
+  "name": "Table Reservations",
+  "description": "Table reservation system with date/time picker, party size, occasion tags, and double-booking prevention.",
+  "defaultSize": { "width": 600, "height": 500 },
+  "properties": [
+    { "key": "maxPartySize", "type": "number", "default": 20 },
+    { "key": "maxCapacity", "type": "number", "default": 60 },
+    { "key": "slotDurationMinutes", "type": "number", "default": 90 },
+    { "key": "closedDays", "type": "string", "default": "monday" },
+    { "key": "lunchStart", "type": "string", "default": "12:00" },
+    { "key": "lunchEnd", "type": "string", "default": "14:30" },
+    { "key": "dinnerStart", "type": "string", "default": "19:00" },
+    { "key": "dinnerEnd", "type": "string", "default": "22:30" },
+    { "key": "enableWaitlist", "type": "boolean", "default": true },
+    { "key": "primaryColor", "type": "string", "default": "#1B3A6B" },
+    { "key": "accentColor", "type": "string", "default": "#E8731A" }
+  ],
+  "events": ["reservationBooked", "dateSelected", "waitlistJoined"]
+}
