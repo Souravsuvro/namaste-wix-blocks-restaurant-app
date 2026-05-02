@@ -1,0 +1,44 @@
+{
+  "business": {
+    "name": "Namaste Gien",
+    "tagline": "Cuisine Indienne Authentique | Bar & Restaurant",
+    "address": {
+      "street": "2 Pl. du Maréchal Foch",
+      "city": "Gien",
+      "postcode": "45500",
+      "department": "Loiret",
+      "region": "Centre-Val de Loire",
+      "country": "France",
+      "countryCode": "FR",
+      "full": "2 Pl. du Maréchal Foch, 45500 Gien, France"
+    },
+    "contact": {
+      "phone": "+33 7 51 51 71 09",
+      "email": "contact@namastegien.fr",
+      "website": "https://www.namastegien.fr"
+    },
+    "hours": {
+      "monday": "Fermé",
+      "tuesday": "12:00–14:30 | 18:30–22:30",
+      "wednesday": "12:00–14:30 | 18:30–22:30",
+      "thursday": "12:00–14:30 | 18:30–22:30",
+      "friday": "12:00–14:30 | 18:30–22:30",
+      "saturday": "12:00–15:00 | 18:30–23:00",
+      "sunday": "12:00–15:00 | 18:30–22:00"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/NamasteGien",
+      "instagram": "https://www.instagram.com/NamasteGien",
+      "google_maps": "https://maps.google.com/?q=2+Pl.+du+Maréchal+Foch,+45500+Gien,+France"
+    },
+    "brand": {
+      "primaryColor": "#1B3A6B",
+      "accentColor": "#E8731A",
+      "goldColor": "#D4A843",
+      "cuisine": "Indian",
+      "priceRange": "€€",
+      "seatingCapacity": 60,
+      "languages": ["fr", "en"]
+    }
+  }
+}

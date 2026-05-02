@@ -1,0 +1,39 @@
+{
+  "appName": "Namaste Gien — Restaurant Widget",
+  "version": "1.0.0",
+  "description": "Wix Blocks widget suite for Namaste Gien Indian Restaurant, Gien, France",
+  "restaurant": {
+    "name": "Namaste Gien",
+    "street": "2 Pl. du Maréchal Foch",
+    "city": "Gien",
+    "postcode": "45500",
+    "department": "Loiret",
+    "country": "FR",
+    "phone": "+33751517109",
+    "email": "contact@namastegien.fr",
+    "website": "https://www.namastegien.fr",
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "language": "fr",
+    "timezone": "Europe/Paris",
+    "vatRates": {
+      "food": 0.10,
+      "alcohol": 0.20,
+      "takeaway": 0.10
+    }
+  },
+  "brand": {
+    "primaryColor": "#1B3A6B",
+    "accentColor": "#E8731A",
+    "goldColor": "#D4A843",
+    "fontFamily": "Playfair Display, Georgia, serif",
+    "bodyFont": "Inter, system-ui, sans-serif"
+  },
+  "features": {
+    "onlineOrdering": true,
+    "tableReservations": true,
+    "menuDisplay": true,
+    "loyaltyProgram": false,
+    "deliveryTracking": false
+  }
+}
